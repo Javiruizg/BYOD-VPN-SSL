@@ -97,7 +97,6 @@ KEYSTORE_PASSWORD="KegJpxUCW8c6^mK%%roscJULLw7SgwS3FCVFb!CZopcGGQJaLM%Qra9PNmD@e
 
 Para poner en marcha el sistema lo primero que hay que hacer es encender los 2 servidores, para ello primero se debe ejecutar el contenido del script .sql para preparar la base de datos en MariaDB. Luego se debe abrir una carpeta en la carpeta raíz del proyecto y ejecutar:
 
- (Tras ejecutar el primero de los comandos nos pedirá introducir la contraseña guardada en el KEYSTORE_PASSWORD)
 ```bash
 python ./src/servers/server.py 
 python ./src/servers/salt_server.py

@@ -117,7 +117,7 @@ def start_ssl_server():
 
     # 4. Configurar el SSLContext para el servidor
     ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
-    ssl_context.load_cert_chain(certfile=temp_key_cert_path, keyfile=temp_key_cert_path)
+    ssl_context.load_cert_chain(certfile=temp_key_cert_path, keyfile=temp_key_cert_path, password=os.getenv("KEYSTORE_PASSWORD"))
     ssl_context.options |= ssl.OP_NO_TLSv1 | ssl.OP_NO_TLSv1_1 | ssl.OP_NO_TLSv1_2
     ssl_context.minimum_version = ssl.TLSVersion.TLSv1_3
 
