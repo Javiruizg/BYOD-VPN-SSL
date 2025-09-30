@@ -87,3 +87,25 @@ Para crear las bases de datos, ejecutar el siguiente comando:
 ```sql
 source resources/database.sql;
 ```
+
+
+## INICIO DEL SISTEMA
+
+Antes de iniciar el sistema será necesario introducir en el .env del sistema la contraseña del servidor de la siguiente manera:
+
+KEYSTORE_PASSWORD="KegJpxUCW8c6^mK%%roscJULLw7SgwS3FCVFb!CZopcGGQJaLM%Qra9PNmD@eexm" 
+
+Para poner en marcha el sistema lo primero que hay que hacer es encender los 2 servidores, para ello primero se debe ejecutar el contenido del script .sql para preparar la base de datos en MariaDB. Luego se debe abrir una carpeta en la carpeta raíz del proyecto y ejecutar:
+
+ (Tras ejecutar el primero de los comandos nos pedirá introducir la contraseña guardada en el KEYSTORE_PASSWORD)
+```bash
+python ./src/servers/server.py 
+python ./src/servers/salt_server.py
+```
+
+Para ejecutar el cliente, abrir una terminal en la carpeta raíz y ejecutar:
+```bash
+python ./src/client/client_socket.py
+```
+
+Aunque se proporcione el código fuente, se recomienda configurar las variables de entorno al gusto del usuario y que se creen ejecutables por mayor seguridad.
